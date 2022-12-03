@@ -28,7 +28,7 @@ public class DuckDBDriver implements java.sql.Driver {
 		if (info == null) {
 			info = new Properties();
 		}else{
-			info = info.clone();
+			info = (Properties) info.clone();
 		}
 		String prop_val = (String) info.remove(DUCKDB_READONLY_PROPERTY);
 		if (prop_val != null) {
